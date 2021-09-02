@@ -16,8 +16,8 @@ function setup() {
 function draw() {
   background('#78c926') ;
 
-  image(FFVIIRe, width/2, height/2, 280, 100) ;
-  image(NADDPod, width/2, height/2-150, 100, 170) ;
+  image(FFVIIRe, width/2, height/2, 240, 100) ;
+  image(NADDPod, width/2, height/2-150, 100, 160) ;
   image(SouthernF, width/2, height/2+120, 150, 100) ;
-  
+
 }
