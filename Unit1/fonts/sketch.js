@@ -7,13 +7,14 @@ function setup() {
   f1 = loadFont('assets/hakubo.ttf') ;
   f2 = loadFont('assets/koreanCall.ttf') ;
   f3 = loadFont('assets/gilpervelz.ttf') ;
+  textAlign(CENTER)
 }
 
 function draw() {
   background("pink")
   textFont(f3) ;
   textSize(48) ;
-  text("Hello World", width/4, height/2) ;
+  text("Hello World", width/2, height/2) ;
 
   textFont(f1) ;
   textSize(28) ;
