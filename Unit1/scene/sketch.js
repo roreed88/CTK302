@@ -103,11 +103,11 @@ function draw() {
   fill(107, 252, 3) ;
   rect(0, 300, 720, 400) ;
 
-//background tree trunk
+//background tree trunk (1)
   fill(153, 59, 8) ;
   quad(620, 280, 622, 280, 623, 310, 619, 310) ;
 
-//background tree foliage
+//background tree foliage (1)
   fill(42, 171, 19) ;
   ellipse(620, 279, 20, 15) ;
 
@@ -119,6 +119,23 @@ function draw() {
 
   fill(42, 171, 19) ;
   ellipse(618, 275, 20, 15) ;
+
+//background tree trunk (2)
+  fill(153, 59, 8)
+  quad(46, 287, 49, 287, 51, 330, 45, 330)
+
+//background tree foliage (2)
+  fill(42, 171, 19) ;
+  ellipse(50, 286, 25, 22) ;
+
+  fill(42, 171, 19) ;
+  ellipse(47, 281, 20, 20) ;
+
+  fill(42, 171, 19) ;
+  ellipse(57, 286, 18, 20) ;
+
+  fill(42, 171, 19) ;
+  ellipse(40, 283, 17, 16) ;
 
 //house
   fill(132, 180, 189) ;
