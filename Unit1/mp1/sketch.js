@@ -275,7 +275,7 @@ function draw() {
     noStroke() ;
 
     fill(134, 181, 148) ;
-    ellipse(473, 260, 56, 86) ;
+    ellipse(473, 284, 42, 42) ;
 
 //head
     stroke(color(65, 89, 73)) ;
@@ -677,7 +677,7 @@ function draw() {
 
 //... but the robots were mean and wanted to kick BounceBack out of their home.
 //Looks like BounceBack will need their resilience to beat the robots.
-//They're gonna take a lot of hits... 
+//They're gonna take a lot of hits...
 
     }
 
