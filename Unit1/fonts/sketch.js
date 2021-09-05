@@ -7,7 +7,7 @@ function setup() {
   f1 = loadFont('assets/hakubo.ttf') ;
   f2 = loadFont('assets/koreanCall.ttf') ;
   f3 = loadFont('assets/gilpervelz.ttf') ;
-  textAlign(CENTER)
+  textAlign(CENTER) ;
 }
 
 function draw() {
@@ -23,5 +23,5 @@ function draw() {
   textFont(f2) ;
   textSize(36) ;
   text("Hey Hey!", 150, 325) ;
-  
+
 }
