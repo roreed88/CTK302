@@ -37,7 +37,6 @@ function draw() {
         //Orange (Sun): 255, 117, 43
         //Yellow/Green (Sun): 209, 227, 50
         //Red/Orange (Sun): 252, 62, 40
-        //Robot body (gray): 128, 145, 133
 
 //rays
     fill(251, 177, 60) ;
@@ -50,7 +49,7 @@ function draw() {
     triangle(638, 351, 325, 0, 0, 0) ;
 
     fill(251, 177, 60) ;
-    triangle(638, 351, 0, 125, 0, 400) ;
+    triangle(638, 351, 0, 150, 0, 400) ;
 
     fill(251, 177, 60)
     triangle(638, 351, 50, 500, 450, 500) ;
@@ -67,7 +66,7 @@ function draw() {
     fill(251, 177, 60) ;
     triangle(638, 351, 800, 310, 800, 190) ;
 
-    //Sun
+//Sun
     fill(255, 51, 102) ;
     ellipse(440, 10, 200, 200) ;
 
@@ -238,14 +237,27 @@ function draw() {
     noFill() ;
     arc(675, 332, 40, 40, 225, 285, OPEN) ;
 
+//smack
+    stroke(color(0, 82, 110)) ;
+    strokeWeight(8) ;
+    strokeCap(PROJECT) ;
+
+    noFill() ;
+    arc(610, 372, 20, 20, 220, 40, OPEN) ;
+
+    noStroke() ;
+
 //speed lines
+    stroke(color(65, 89, 73)) ;
+    strokeWeight(2) ;
+
     line(463, 172, 437, 139) ;
 
     line(447, 183, 430, 164) ;
 
-    line(434, 200, 418, 181) ;
+    line(434, 200, 418, 182) ;
 
-    line(432, 229, 415, 210) ;
+    line(432, 229, 415, 211) ;
 
     line(418, 246, 405, 233) ;
 
@@ -364,6 +376,12 @@ function draw() {
     // vertex(430, 20) ;
     // endContour() ;
     endShape(CLOSE) ;
+
+//text
+    fill(206, 255, 26) ;
+    textFont(f5) ;
+    textSize(24) ;
+    text("This is BounceBack.", 173, 250) ;
 
   } else {
     // when the mouse isn't pressed!
@@ -661,10 +679,11 @@ function draw() {
 
     noStroke() ;
 
-    // fill(251, 177, 60) ;
-    // textFont(f3) ;
-    // textSize(24) ;
-    // text("This is BounceBack.", 575, 210) ;
+//text
+    fill(251, 177, 60) ;
+    textFont(f3) ;
+    textSize(24) ;
+    text("This is BounceBack.", 575, 250) ;
     // text("Their superpower is their resilience.", 575, 240) ;
     // text("They'll need it to fight the robots.", 575, 270) ;
     // text("They take a lot of hits...", 575, 300) ;
