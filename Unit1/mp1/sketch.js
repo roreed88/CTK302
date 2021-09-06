@@ -662,7 +662,7 @@ function draw() {
     noStroke() ;
 
     fill(251, 177, 60) ;
-    textFont(f2) ;
+    textFont(f3) ;
     textSize(24) ;
     text("This is BounceBack.", 575, 210) ;
     text("Their superpower is their resilience.", 575, 240) ;
