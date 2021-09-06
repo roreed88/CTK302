@@ -221,21 +221,21 @@ function draw() {
     // arc(658, 370, 20, 20, 20, 140, OPEN) ;
 
 //nose
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(653, 343, 20, 20, 200, 320, OPEN) ;
 
 //Eyelid1
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(615, 330, 40, 40, 250, 340, OPEN) ;
 
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(628, 343, 40, 40, 225, 285, OPEN) ;
 
 //Eyelid2
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(681, 318, 40, 40, 180, 270, OPEN) ;
 
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(675, 332, 40, 40, 225, 285, OPEN) ;
 
 //speed lines
@@ -306,14 +306,14 @@ function draw() {
     fill(134, 181, 148) ;
     ellipse(424, 290, 20, 20) ;
 
-    fill(251, 177, 60) ;
+    noFill() ;
     arc(409, 309, 15, 15, 220, 40, OPEN) ;
 
     stroke(color(65, 89, 73)) ;
     strokeWeight(8) ;
     strokeCap(PROJECT) ;
 
-    fill(251, 177, 60) ;
+    noFill() ;
     arc(545, 340, 20, 20, 140, 320, OPEN) ;
 
     noStroke() ;
@@ -485,10 +485,10 @@ function draw() {
     fill(134, 181, 148) ;
     ellipse(268, 162, 10, 10) ;
 
-    fill(255, 120, 169) ;
+    noFill() ;
     arc(329, 169, 5, 5, 140, 320, OPEN) ;
 
-    fill(255, 120, 169) ;
+    noFill() ;
     arc(261, 169, 5, 5, 220, 40, OPEN) ;
 
 //Robot face
@@ -618,15 +618,15 @@ function draw() {
     strokeWeight(2) ;
     strokeCap(PROJECT) ;
 
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(172, 265, 20, 20, 200, 320, OPEN) ;
 
 //Eyelid2
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(124, 270, 20, 20, 200, 320, OPEN) ;
 
 //BB's nose
-    fill(0, 187, 249) ;
+    noFill() ;
     arc(152, 292, 20, 20, 200, 320, OPEN) ;
 
 //BB's Mouth
@@ -661,13 +661,13 @@ function draw() {
 
     noStroke() ;
 
-    fill(251, 177, 60) ;
-    textFont(f3) ;
-    textSize(24) ;
-    text("This is BounceBack.", 575, 210) ;
-    text("Their superpower is their resilience.", 575, 240) ;
-    text("They'll need it to fight the robots.", 575, 270) ;
-    text("They take a lot of hits...", 575, 300) ;
+    // fill(251, 177, 60) ;
+    // textFont(f3) ;
+    // textSize(24) ;
+    // text("This is BounceBack.", 575, 210) ;
+    // text("Their superpower is their resilience.", 575, 240) ;
+    // text("They'll need it to fight the robots.", 575, 270) ;
+    // text("They take a lot of hits...", 575, 300) ;
 
 //This is BounceBack.  They have the special power of resilience.
 //That's how they got their name.  They always BounceBack.
