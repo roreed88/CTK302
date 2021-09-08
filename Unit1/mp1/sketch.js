@@ -8,7 +8,7 @@ function setup() {
   f3 = loadFont('assets/komik.ttf') ;
   f4 = loadFont('assets/madMecha.ttf') ;
   f5 = loadFont('assets/originTech.ttf') ;
-  textAlign(CENTER) ;
+  // textAlign(RIGHT) ;
 
   rectMode(CENTER);
   ellipseMode(CENTER);
@@ -378,10 +378,11 @@ function draw() {
     endShape(CLOSE) ;
 
 //text
+    textAlign(LEFT) ;
     fill(206, 255, 26) ;
     textFont(f5) ;
-    textSize(24) ;
-    text("This is BounceBack.", 173, 250) ;
+    textSize(32) ;
+    text("...but the robots were \nmean and wanted to \nkick BounceBack out \nof their home. Looks \nlike BounceBack \nwill need their \nresilience to beat \nthe robots. \nThey're gonna \ntake a lot of \nhits....", 20, 62) ;
 
   } else {
     // when the mouse isn't pressed!
@@ -680,23 +681,24 @@ function draw() {
     noStroke() ;
 
 //text
+    textAlign(RIGHT) ;
     fill(251, 177, 60) ;
     textFont(f3) ;
     textSize(24) ;
-    text("This is BounceBack.", 575, 250) ;
+    text("This is BounceBack.They\nhave the special power\nof resilience.That's how\nthey got their name. They\nalways bounce back. They\nlive in a remote corner of\nthe universe which makes\nthem want company. One day\nthe robots found this lonely \nplanet. BounceBack was \nexcited to make some friends...", 775, 110) ;
     // text("Their superpower is their resilience.", 575, 240) ;
     // text("They'll need it to fight the robots.", 575, 270) ;
     // text("They take a lot of hits...", 575, 300) ;
 
-//This is BounceBack.  They have the special power of resilience.
-//That's how they got their name.  They always BounceBack.
-//BounceBack lives in a remote corner of the universe.
-//Being stuck alone on their home planet make BounceBack want company.
-//One day the robots found this lonely planet.  BounceBack was excited to make some friends...
+// This is BounceBack.  They have the special power of resilience.
+// That's how they got their name.  They always BounceBack.
+// BounceBack lives in a remote corner of the universe.
+// Being stuck alone on their home planet make BounceBack want company.
+// One day the robots found this lonely planet.  BounceBack was excited to make some friends...
 
-//... but the robots were mean and wanted to kick BounceBack out of their home.
-//Looks like BounceBack will need their resilience to beat the robots.
-//They're gonna take a lot of hits...
+// ... but the robots were mean and wanted to kick BounceBack out of their home.
+// Looks like BounceBack will need their resilience to beat the robots.
+// They're gonna take a lot of hits...
 
     }
 
@@ -704,11 +706,11 @@ function draw() {
 
   // this shows mouse location - comment it out when you're done!
 
-
-  fill(0);
-  textFont(f5) ;
-  textSize(12) ;
-  text(mouseX + ", " + mouseY, 60, 40);
+  // 
+  // fill(0);
+  // textFont(f5) ;
+  // textSize(12) ;
+  // text(mouseX + ", " + mouseY, 60, 40);
 
 }
 
