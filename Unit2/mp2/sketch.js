@@ -66,6 +66,7 @@ function draw() {
       break;
 
     case 2:
+    background('white');
       // image(i4, 375, 250, 750, 500);
       fill('black');
       textFont(f1);
