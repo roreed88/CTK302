@@ -102,6 +102,7 @@ function draw() {
       break;
 
     case 5:
+    background('white');
       // image(i1, 375, 250, 750, 500);
       fill('black');
       textFont(f1);
@@ -137,6 +138,7 @@ function draw() {
       break;
 
     case 8:
+    background('white');
       // image(i1, 375, 250, 750, 500);
       text("victory", 200, 200);
       timer++;
