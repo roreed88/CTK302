@@ -128,7 +128,7 @@ function draw() {
       noFill();
       fill('black');
       textSize(15);
-      text(mouseX + "," + mouseY, 470, 30);
+      // text(mouseX + "," + mouseY, 470, 30);
       break;
 
     case 7:
