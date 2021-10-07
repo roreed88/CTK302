@@ -66,7 +66,7 @@ function draw() {
       break;
 
     case 2:
-      image(i4, 375, 250, 750, 500);
+      // image(i4, 375, 250, 750, 500);
       fill('black');
       textFont(f1);
       textSize(20);
@@ -102,7 +102,7 @@ function draw() {
       break;
 
     case 5:
-      image(i1, 375, 250, 750, 500);
+      // image(i1, 375, 250, 750, 500);
       fill('black');
       textFont(f1);
       textSize(70);
@@ -137,7 +137,7 @@ function draw() {
       break;
 
     case 8:
-      image(i1, 375, 250, 750, 500);
+      // image(i1, 375, 250, 750, 500);
       text("victory", 200, 200);
       timer++;
       if (timer > 6*60) {
