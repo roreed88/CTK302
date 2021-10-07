@@ -5,7 +5,7 @@ let sound3;
 let f1;
 
 function preload() {
-  sound1 = loadSound('assets/arcade.mp3');
+  sound1 = loadSound('assets/8bit.mp3');
   sound2 = loadSound('assets/retro.mp3');
   sound3 = loadSound('assets/boss.mp3');
 
