@@ -6,7 +6,7 @@ function setup() {
 
 function draw() {
 
-  switch(state){
+  switch (state) {
     case 0:
     background('black');
       timer++;
