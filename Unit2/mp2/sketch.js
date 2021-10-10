@@ -12,12 +12,12 @@ function preload() {
   s3 = loadSound('assets/8bit.mp3');
   // s4 = loadSound('assets/ie.mp3');
 
-  s1.loop();
-  s1.pause();
-  s2.loop();
-  s2.pause();
-  s3.loop();
-  s3.pause();
+  // s1.loop();
+  // s1.pause();
+  // s2.loop();
+  // s2.pause();
+  // s3.loop();
+  // s3.pause();
   // s4.loop();
   // s4.pause();
 }
@@ -41,7 +41,7 @@ function draw() {
 
   switch (state) {
     case 0:
-      s1.play();
+      s1.loop();
       state = 1;
       break;
 
@@ -66,8 +66,8 @@ function draw() {
       break;
 
     case 2:
-    background('white');
-      // image(i4, 375, 250, 750, 500);
+    // background('white');
+      image(i4, 375, 250, 750, 500);
       fill('black');
       textFont(f1);
       textSize(20);
@@ -98,7 +98,7 @@ function draw() {
       break;
 
     case 4:
-      s3.play();
+      s3.loop();
       state = 5;
       break;
 
@@ -134,7 +134,7 @@ function draw() {
       break;
 
     case 7:
-      s2.play();
+      s2.loop();
       state = 8;
       break;
 
