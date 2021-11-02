@@ -8,12 +8,20 @@ let bounceB;
 let robot;
 let f1;
 let s1;
+let s2;
+let s3;
 
 function preload(){
   s1 = loadSound('assets/8bit.mp3');
+  s2 = loadSound('assets/arcade.mp3');
+  s3 = loadSound('assets/boss.mp3');
 
   s1.loop();
   s1.pause();
+  s2.loop();
+  s2.pause();
+  s3.loop();
+  s3.pause();
 }
 
 function setup() {
@@ -23,7 +31,7 @@ function setup() {
     cars.push(new Car());
   }
 
-  f1 = loadFont('assets/technoF.ttf');
+  f1 = loadFont('assets/madMecha.ttf');
 
   bounceB = loadImage('assets/bounceBack.png');
   robot = loadImage('assets/robot1.png');
@@ -37,13 +45,14 @@ function draw() {
   switch (state) {
     case 0:
     background(0);
-    s1.loop();
+    s2.loop();
     fill(255);
     textFont(f1);
     textSize(28);
     text("Bounce Back Vs. The Robots! \n\n Click to Play! \n\n Remember to Catch the Robots with the Arrow Keys!", width / 2, height / 2);
     state = 1;
     break;
+
     case 1:
       background(0);
       fill(255);
@@ -55,13 +64,19 @@ function draw() {
     case 2:
       game();
       timer++;
-      if(timer > 30*60) {
+      if(timer > 20*60) {
         timer = 0;
-        state = 3;
+        state = 5;
       }
       break;
 
-    case 3:
+      case 3:
+      s2.pause();
+      s3.loop();
+      state = 4;
+      break;
+
+    case 4:
       background(0, 0, 255);
       fill(0);
       textFont(f1);
@@ -69,7 +84,12 @@ function draw() {
       text("Victory! \nYou're Keepin' It Bouncy!", width / 2, height / 2);
       break;
 
-    case 4:
+      case 5:
+      s2.pause();
+      s3.loop();
+      state = 6;
+
+    case 6:
       background(0);
       fill(255);
       textFont(f1);
@@ -85,12 +105,12 @@ function mouseReleased() {
       state = 2;
       break;
 
-    case 3: // win
+    case 4: // win
       resetTheGame();
       state = 0;
       break;
 
-    case 4: //lose
+    case 6: //lose
       resetTheGame();
       state = 0;
       break;
@@ -110,13 +130,13 @@ function game() {
   }
 
   if (cars.length == 0) {
-    state = 2;
+    state = 3;
   }
 
   fill(0);
   textFont(f1);
   textSize(14);
-  text("cars left: " + cars.length + "\ncars eaten:" + carsEaten, 60, 30);
+  text("Robots Left: " + cars.length + "\nRobots Defeated:" + carsEaten, 60, 30);
 
   image(bounceB, frogPos.x, frogPos.y, 95, 115);
   checkForKeys();
@@ -125,6 +145,8 @@ function game() {
 function resetTheGame() {
   timer = 0;
   s1.pause();
+  s2.pause();
+  s3.pause();
   cars = [];
   carsEaten = 0;
   for (let i = 0; i < maxCars; i++) {
@@ -143,7 +165,7 @@ function checkForKeys() {
 class Car {
   constructor() {
     this.pos = createVector(random(100), random(100));
-    this.vel = createVector(random(-3, 3), random(-3, 3));
+    this.vel = createVector(random(-5, 5), random(-5, 5));
     this.col = color(random(255), random(255), random(255));
     this.size = random(10, 50);
   }
