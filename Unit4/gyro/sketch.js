@@ -14,7 +14,7 @@ function setup() {
 
 
 
-  bunnyImage = loadImage("assets/boundBack1.png");
+  bunnyImage = loadImage("assets/bounceBack1.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
