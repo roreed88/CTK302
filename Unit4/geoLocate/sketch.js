@@ -32,7 +32,7 @@ function positionPing(position) {
   distance = calcGeoDistance(locationData.latitude, locationData.longitude, position.latitude, position.longitude, 'mi');
 
   background(255, 153, 43);
-  fill(255, 153, 43);
+  fill(43, 255, 248);
   text("lat: " + position.latitude, 10, 40);
   text("long: " + position.longitude, 10, 90);
   text("number of updates " + num, 10, 140);
