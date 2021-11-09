@@ -60,7 +60,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(100);
+  textSize(50);
   textAlign(CENTER);
   text("Bounce Back!", width / 2, height / 2);
 
