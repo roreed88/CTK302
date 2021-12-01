@@ -213,7 +213,7 @@ function draw() {
 }
 }
 
-function mouseReleased() {
+function touchStarted() {
   if ((myState == 1) && (mouseX > width/2 - 70) && (mouseX < width/2 + 70) && (mouseY > height/2 -25) && (mouseY < height/2 + 25)) {
     myState = 2;
   }
