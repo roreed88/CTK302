@@ -81,7 +81,7 @@ function draw() {
   fill(44, 56, 38);
   textSize(40);
   textAlign(CENTER);
-  text("Bounce Back!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Catch the Robots and Bounce Back!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
