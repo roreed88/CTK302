@@ -30,6 +30,7 @@ var frogPos;
 
 function preload() {
     sound1 = loadSound('assets/retro.mp3');
+    sound2 = loadSound('assets/electricBurn.mp3');
 
     sound1.loop();
     sound1.pause();
@@ -113,39 +114,34 @@ function draw() {
 
       noStroke();
 
-      fill(0, 187, 249);
-      rect(width/2, height/2, 140, 50, 10);
-
-      background(255, 147, 31);
-
-      image(backdrop, width/2, height/2, width, height);
+      image(backdrop, width/2, height/2, 720, 1280);
 
       fill(0, 187, 249);
       textFont(font1);
       textSize(28);
       textAlign(CENTER);
-      text("Catch the Robots with Bounce Back!", width/2, height - 40);
+      text("Catch the Robots with Bounce Back!", 360, 1240);
 
-      image(cloud1, c1, height/2, width, height);
+      image(cloud1, c1, height/2, 720, 1280);
 
       c1 = c1 + windspeed/2;
       if (c1 > width + 300) c1 = -125;
 
-      image(planet2, width/2, height/2, width, height);
+      image(planet2, width/2, height/2, 720, 1280);
 
-      image(cloud2, c2, height/2, width, height);
+      image(cloud2, c2, height/2, 720, 1280);
 
-      c2 = c2 + windspeed/2.5;
+      c2 = c2 + windspeed/3;
       if (c2 > width + 125) c2 = -300;
 
-      image(planet3, width/2, height/2, width, height);
+      image(planet3, width/2, height/2, 720, 1280);
 
-      image(cloud3, c3, height/2, width, height);
+      image(cloud3, c3, height/2, 720, 1280);
 
-      c3 = c3 + windspeed/3;
+      c3 = c3 + windspeed/2.5;
       if (c3 > width + 300) c3 = -125;
 
-      image(planet4, width/2, height/2, width, height);
+      image(planet4, width/2, height/2, 720, 1280);
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -176,6 +172,7 @@ function draw() {
     cars[i].drive();
     if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
+      sound2.play;
     }
   }
     break;
