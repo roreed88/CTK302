@@ -113,7 +113,7 @@ function draw() {
 
       fill(0, 187, 249);
       textFont(font1);
-      textSize(28);
+      textSize(20);
       textAlign(CENTER);
       text("Catch the Robots with Bounce Back!", width/2 , height - 40);
 
