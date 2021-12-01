@@ -115,7 +115,8 @@ function draw() {
       fill(0, 187, 249);
       rect(width/2, height/2, 140, 50, 10);
 
-      fill(255, 147, 31);
+      // fill(255, 147, 31); real fill
+      fill(0);
       textFont(font1);
       textSize(30);
       textAlign(CENTER);
