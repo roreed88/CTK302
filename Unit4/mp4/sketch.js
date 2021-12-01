@@ -29,7 +29,7 @@ var cars = [];
 var frogPos;
 
 function preload() {
-    sound1 = loadSound('assets/8bit.mp3');
+    sound1 = loadSound('assets/retro.mp3');
 
     sound1.loop();
     sound1.pause();
@@ -40,7 +40,7 @@ function preload() {
 
 function setup() {
 
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(720, 1280);
 
   // initialize accelerometer variables
   alpha = 0;
@@ -119,7 +119,7 @@ function draw() {
       textFont(font1);
       textSize(30);
       textAlign(CENTER);
-      text("START!", width/1.96, height/1.23, windowWidth - 200, windowHeight - 200);
+      text("START!", width/2, height/2 + 8);
 
       break;
 
@@ -127,7 +127,7 @@ function draw() {
 
       sound1.loop();
 
-      state = 3;
+      myState = 3;
 
       break;
 
@@ -135,28 +135,28 @@ function draw() {
 
       background(255, 147, 31);
 
-      image(backdrop, width/2, height/2, windowWidth, windowHeight);
+      image(backdrop, width/2, height/2, width, height);
 
-      image(cloud1, c1, height/2, widowWidth, windowHeight);
+      image(cloud1, c1, height/2, width, height);
 
       c1 = c1 + windspeed/2;
       if (c1 > width + 125) c1 = -125;
 
-      image(planet2, width/2, height/2, windowWidth, windowHeight);
+      image(planet2, width/2, height/2, width, height);
 
-      image(cloud2, c2, height/2, windowWidth, windowHeight);
+      image(cloud2, c2, height/2, width, height);
 
       c2 = c2 + windspeed/2.5;
       if (c2 > width + 125) c2 = -125;
 
-      image(planet3, width/2, height/2, windowWidth, windowHeight);
+      image(planet3, width/2, height/2, width, height);
 
-      image(cloud3, c3, height/2, windowWidth, windowHeight);
+      image(cloud3, c3, height/2, width, height);
 
       c3 = c3 + windspeed/1.75;
       if (c3 > width + 125) c3 = -125;
 
-      image(planet1, width/2, height/2, windowWidth, windowHeight);
+      image(planet4, width/2, height/2, width, height);
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -213,8 +213,8 @@ function draw() {
 }
 
 function mouseReleased() {
-  if ((myState == 1) && (mouseX > width/1.96 - 70) && (mouseX < width/1.96 + 70) && (mouseY > height/1.23 -25) && (mouseY < height/1.23 + 25)) {
-    state = 2;
+  if ((myState == 1) && (mouseX > width/2 - 70) && (mouseX < width/2 + 70) && (mouseY > height/2 -25) && (mouseY < height/2 + 25)) {
+    myState = 2;
   }
 }
 
