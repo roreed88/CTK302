@@ -101,61 +101,49 @@ function draw() {
       break;
 
       case 1:
-      background(255, 147, 31);
 
-      noStroke();
+      sound1.loop();
 
-      // MORE DECORATIONS - write that pretty ATK type on top.
-      fill(0, 187, 249);
-      textFont(font1);
-      textSize(40);
-      textAlign(CENTER);
-      text("Catch the Robots with Bounce Back!", width/2, height/2.5, windowWidth - 200, windowHeight - 200);
-
-      fill(0, 187, 249);
-      rect(width/2, height/2, 140, 50, 10);
-
-      // fill(255, 147, 31); real fill
-      fill(0);
-      textFont(font1);
-      textSize(30);
-      textAlign(CENTER);
-      text("START!", width/2, height/2 + 8);
+      myState = 2;
 
       break;
 
       case 2:
+      background(255, 147, 31);
 
-      sound1.loop();
+      noStroke();
 
-      myState = 3;
-
-      break;
-
-      case 3:
+      fill(0, 187, 249);
+      rect(width/2, height/2, 140, 50, 10);
 
       background(255, 147, 31);
 
       image(backdrop, width/2, height/2, width, height);
 
+      fill(0, 187, 249);
+      textFont(font1);
+      textSize(28);
+      textAlign(CENTER);
+      text("Catch the Robots with Bounce Back!", width/2, height - 40);
+
       image(cloud1, c1, height/2, width, height);
 
       c1 = c1 + windspeed/2;
-      if (c1 > width + 125) c1 = -125;
+      if (c1 > width + 300) c1 = -125;
 
       image(planet2, width/2, height/2, width, height);
 
       image(cloud2, c2, height/2, width, height);
 
       c2 = c2 + windspeed/2.5;
-      if (c2 > width + 125) c2 = -125;
+      if (c2 > width + 125) c2 = -300;
 
       image(planet3, width/2, height/2, width, height);
 
       image(cloud3, c3, height/2, width, height);
 
-      c3 = c3 + windspeed/1.75;
-      if (c3 > width + 125) c3 = -125;
+      c3 = c3 + windspeed/3;
+      if (c3 > width + 300) c3 = -125;
 
       image(planet4, width/2, height/2, width, height);
 
@@ -211,12 +199,6 @@ function draw() {
 
 
 }
-}
-
-function touchStarted() {
-  if ((myState == 1) && (mouseX > width/2 - 70) && (mouseX < width/2 + 70) && (mouseY > height/2 -25) && (mouseY < height/2 + 25)) {
-    myState = 2;
-  }
 }
 
 function deviceShaken() {
