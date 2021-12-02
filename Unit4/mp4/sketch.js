@@ -115,8 +115,8 @@ function draw() {
       textFont(font1);
       textSize(20);
       textAlign(CENTER);
-      text("Catch the Robots with Bounce Back!", width/2 , height - 40);
-      text("Tap the Screen for Music!", width/2, 40);
+      text("Catch the Robots with Bounce Back!", width/2 , 30);
+      text("Tap the Screen for Music!", width/2, height - 30);
 
       image(cloud1, c1, height/2, width, height);
 
