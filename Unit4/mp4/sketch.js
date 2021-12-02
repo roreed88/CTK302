@@ -116,6 +116,7 @@ function draw() {
       textSize(20);
       textAlign(CENTER);
       text("Catch the Robots with Bounce Back!", width/2 , height - 40);
+      text("Tap the Screen for Music!", width/2, 40);
 
       image(cloud1, c1, height/2, width, height);
 
@@ -226,7 +227,7 @@ window.addEventListener('devicemotion', function(e) {
 // car class!!
 function Car() {
   // attributes
-  this.pos = createVector(100, 100);
+  this.pos = createVector(width/2, height/2);
   this.vel = createVector(random(-5, 5), random(-5, 5));
   // this.r = random(255);
   // this.g = random(255);
