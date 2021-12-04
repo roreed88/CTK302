@@ -9,7 +9,7 @@ function setup() {
   loadJSON(url, gotData);
 
   // Regular setup code we usually have
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
@@ -32,7 +32,7 @@ function gotData(data) {
 }
 
 function draw() {
-  background("blue");
+  background(151, 255, 94);
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
@@ -51,10 +51,11 @@ class Bubble {
   }
 
   display() {
-    stroke("red");
+    stroke(232, 2, 2);
     noFill();
     ellipse(this.pos.x, this.pos.y+10, 120, 120);
-    fill("white");
+    fill(232, 2, 2);
+    textSize(12);
     text(
       this.name + "\n" + this.color + "\n",
       this.pos.x,
