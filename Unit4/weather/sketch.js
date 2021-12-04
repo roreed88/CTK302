@@ -7,17 +7,28 @@
 var weather;
 var weatherID = 0; // returned in the JSON weather element
 var myState = 0;
-var x = 0;
 var windspeed = 0;
 var temp = 0;
-var humid =0;
+var humid = 0;
 var feel = 0;
 var f1;
+var cloud1;
+var cloud2;
+var cloud3;
+var c1 = 0;
+var c2 = 0;
+var c3 = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // HERE is the call to get the weather.
+
+  cloud1 = loadImage('assets/cloud1.png');
+  cloud2 = loadImage('assets/cloud2.png');
+  cloud3 = loadImage('assets/cloud3.png');
+
+  imageMode(CENTER);
 
   var myCityString =
     "https://api.openweathermap.org/data/2.5/weather?q=Mobile,AL,US&units=imperial&";
@@ -28,8 +39,8 @@ function setup() {
 
   var myBigString = myCityString + myIDString;
 
-  f1 = loadFont('assets/king.ttf');
-  textAlign(LEFT);
+  f1 = loadFont('assets/king.TTF');
+  textAlign(CENTER);
 
   loadJSON(myBigString, gotData); // that gotData (callback) function happens when JSON comes back.
 }
@@ -55,21 +66,29 @@ function draw() {
     case 1:
       background(66, 135, 245);
 
-      // cloud
-      fill("white");
-      noStroke();
-      ellipse(x, 300, 150, 100);
-      ellipse(x - 50, 275, 100, 75);
-      ellipse(x + 50, 320, 75, 75);
+      image(cloud1, c1, height/2, 720, 1280);
+
+      c1 = c1 + windspeed/2;
+      if (c1 > width + 300) c1 = -125;
+
+      image(cloud2, c2, height/2, 720, 1280);
+
+      c2 = c2 + windspeed/3;
+      if (c2 > width + 125) c2 = -300;
+
+      image(cloud3, c3, height/2, 720, 1280);
+
+      c3 = c3 + windspeed/2.5;
+      if (c3 > width + 300) c3 = -125;
 
       // move the cloud's x position
-      x = x + windspeed/2.5;
-      if (x > width + 125) x = -125;
+      // x = x + windspeed/2.5;
+      // if (x > width + 125) x = -125;
 
       fill(235, 161, 52);
       textFont(f1);
       textSize(30);
-      text("What is the weather in " + weather.name + "?" + "\nWindspeed is " + windspeed + "\nTemperature is " + temp + "\nFeels like " + feel + "\nHumidity is " + humid, 40, 60);
+      text("What is the weather in " + weather.name + "?" + "\nWindspeed is " + windspeed + " mph" + "\nTemperature is " + temp + " degrees" + "\nFeels like " + feel + " degrees" + "\nHumidity is " + humid, width/2, height/2);
 
       // text("Windspeed " + windspeed + " mph", 40, 100);
       // text("Temperature " + temp + "*F", 40, 140);
