@@ -88,7 +88,7 @@ function draw() {
       fill(235, 161, 52);
       textFont(f1);
       textSize(30);
-      text("What is the weather in " + weather.name + "?" + "\nWindspeed is " + windspeed + " mph" + "\nTemperature is " + temp + " degrees" + "\nFeels like " + feel + " degrees" + "\nHumidity is " + humid, width/2, height/2);
+      text("What is the weather in\n" + weather.name + "?" + "\nWindspeed is\n" + windspeed + " mph" + "\nTemperature is\n" + temp + " degrees" + "\nFeels like\n" + feel + " degrees" + "\nHumidity is\n" + humid, width/2, height/2);
 
       // text("Windspeed " + windspeed + " mph", 40, 100);
       // text("Temperature " + temp + "*F", 40, 140);
