@@ -66,11 +66,6 @@ function draw() {
     case 1:
       background(66, 135, 245);
 
-      image(cloud1, c1, height/2, 720, 1280);
-
-      c1 = c1 + windspeed/2;
-      if (c1 > width + 300) c1 = -125;
-
       image(cloud2, c2, height/2, 720, 1280);
 
       c2 = c2 + windspeed/3;
@@ -78,7 +73,7 @@ function draw() {
 
       image(cloud3, c3, height/2, 720, 1280);
 
-      c3 = c3 + windspeed/2.5;
+      c3 = c3 + windspeed/2;
       if (c3 > width + 300) c3 = -125;
 
       // move the cloud's x position
